@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Earring Features</title>
+<style>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #e9e5f0; /* Light purple background */
+}
+
+.container {
+  display: flex;
+  background-color: #d4cfe8; /* Inner shadow */
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), -2px -2px 4px rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.image-container {
+  width: 300px; /* Adjust image width as needed */
+  margin-right: 20px;
+  background-color: #c6bfe0; /* Inner shadow */
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), -2px -2px 4px rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #d9d4e4; /* Inner shadow for header */
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), -2px -2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.feedback {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.feedback-button {
+  background-color: #9a72ac; /* Purple button color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.feedback-form {
+  display: none; /* Initially hide the feedback form */
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="image-container">
+    <img src="https://assets.stylumia.com/originals/2024/11/185/19fce7612c25d9eef2a7dad471b30a64acc069e17e79dd4df2d1d5dd8fa4cb53.jpg" alt="Earrings"> 
+  </div>
+
+  <table>
+    <tr>
+      <th>Feature</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>Type</td>
+      <td>Earrings</td>
+    </tr>
+    <tr>
+      <td>Material</td>
+      <td>Metal</td>
+    </tr>
+    <tr>
+      <td>Color</td>
+      <td>Gold</td>
+    </tr>
+    <tr>
+      <td>Design</td>
+      <td>Floral</td>
+    </tr>
+    <tr>
+      <td>Flower Type</td>
+      <td>Rose</td>
+    </tr>
+    <tr>
+      <td>Pearl Type</td>
+      <td>Drop Pearl</td>
+    </tr>
+    <tr>
+      <td>Fastener</td>
+      <td>Post</td>
+    </tr>
+    <tr>
+      <td>Additional Features</td>
+      <td>Crystal Embellishment</td>
+    </tr>
+  </table>
+
+  <div class="feedback">
+    <p>How was this description?</p>
+    <button class="feedback-button" onclick="showFeedbackForm()">Provide Feedback</button>
+  </div>
+
+  <div class="feedback-form">
+    <textarea id="feedback-text" rows="4" cols="50" placeholder="Enter your feedback here"></textarea><br>
+    <button onclick="submitFeedback()">Submit</button>
+  </div>
+
+</div>
+
+<script>
+function showFeedbackForm() {
+  var feedbackForm = document.querySelector('.feedback-form');
+  feedbackForm.style.display = 'block';
+}
+
+function submitFeedback() {
+  var feedbackText = document.getElementById('feedback-text').value;
+  // Here you can send the feedback to your server using AJAX
+  alert("Thank you for your feedback!");
+  document.getElementById('feedback-text').value = ''; // Clear the feedback text area
+}
+</script>
+
+</body>
+</html>
